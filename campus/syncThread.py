@@ -15,9 +15,9 @@ resourceId = '0'#资源ID
 global source
 source = '3'#来源,3:客户端
 global validCode
-validCode = '2013xiaoyuanjt'#接口验证口口令，活动正式开始后会有一个正式的口令
+validCode = '***'#接口验证口口令，活动正式开始后会有一个正式的口令
 global url
-url = '''http://huodong.feixin.10086.cn:8081/xiaoyuan2013/Service.ashx?Action=UserTaskFinished'''#接口地址
+url = '''http://www.abcdefg.com'''#接口地址
 date_format = '%Y%m%d%H%M%S'
 
 class SyncThread(threading.Thread):
