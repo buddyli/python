@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/crypto
+END
+util.py
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/crypto/util.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/crypto/__init__.py
+END
+jcecrypto.py
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/crypto/jcecrypto.py
+END
+nsscrypto.py
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/crypto/nsscrypto.py
+END
+pbkdf2.py
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/crypto/pbkdf2.py
+END
+pycrypto.py
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/crypto/pycrypto.py
+END

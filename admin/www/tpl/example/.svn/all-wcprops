@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/example
+END
+form.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/example/form.tpl
+END
+message.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/example/message.tpl
+END
+text.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/example/text.tpl
+END
+grid.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/example/grid.tpl
+END

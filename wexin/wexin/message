@@ -1,0 +1,790 @@
+Last login: Thu Mar  7 14:26:05 2013 from 60.247.57.210
+FreeBSD 9.0-RELEASE (GENERIC) #0: Tue Jan  3 07:46:30 UTC 2012
+
+Welcome to FreeBSD!
+
+Before seeking technical support, please use the following resources:
+
+o  Security advisories and updated errata information for all releases are
+   at http://www.FreeBSD.org/releases/ - always consult the ERRATA section
+   for your release first as it's updated frequently.
+
+o  The Handbook and FAQ documents are at http://www.FreeBSD.org/ and,
+   along with the mailing lists, can be searched by going to
+   http://www.FreeBSD.org/search/.  If the doc package has been installed
+   (or fetched via pkg_add -r lang-freebsd-doc, where lang is the
+   2-letter language code, e.g. en), they are also available formatted
+   in /usr/local/share/doc/freebsd.
+
+If you still have a question or problem, please take the output of
+`uname -a', along with any relevant error messages, and email it
+as a question to the questions@FreeBSD.org mailing list.  If you are
+unfamiliar with FreeBSD's directory layout, please refer to the hier(7)
+manual page.  If you are not familiar with manual pages, type `man man'.
+
+Edit /etc/motd to change this login announcement.
+
+[wm@web ~]$ ls
+sou300.ipa			sou300_wap.sql
+sou300_wap.20130114.sql		trans_bk
+sou300_wap.20130114.sql.bz2
+[wm@web ~]$ cd /usr/local/apps/
+[wm@web /usr/local/apps]$ ls
+eicps.com
+[wm@web /usr/local/apps]$ cd eicps.com/
+[wm@web /usr/local/apps/eicps.com]$ cd logs/
+[wm@web /usr/local/apps/eicps.com/logs]$ ls
+access.log	error.log
+[wm@web /usr/local/apps/eicps.com/logs]$ tail -f access.log
+60.247.57.210 - - [07/Mar/2013:14:25:56 +0800] "GET / HTTP/1.1" 200 86 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17"
+60.247.57.210 - - [07/Mar/2013:14:27:52 +0800] "GET / HTTP/1.1" 200 86 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17"
+60.247.57.210 - - [07/Mar/2013:14:27:53 +0800] "GET / HTTP/1.1" 200 86 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17"
+60.247.57.210 - - [07/Mar/2013:14:28:08 +0800] "GET / HTTP/1.1" 500 59 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17"
+60.247.57.210 - - [07/Mar/2013:14:28:09 +0800] "GET / HTTP/1.1" 500 59 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17"
+60.247.57.210 - - [07/Mar/2013:14:28:14 +0800] "GET / HTTP/1.1" 500 59 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17"
+60.247.57.210 - - [07/Mar/2013:14:29:59 +0800] "GET / HTTP/1.1" 500 59 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17"
+60.247.57.210 - - [07/Mar/2013:14:30:10 +0800] "GET / HTTP/1.1" 200 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17"
+101.226.33.174 - - [07/Mar/2013:14:31:00 +0800] "GET /?signature=7363752f924bfaae550ec188c3591f08bc6afea6&echostr=5853875254253336200&timestamp=1362638472&nonce=1362961563 HTTP/1.0" 200 0 "-" "Mozilla/4.0"
+101.226.33.174 - - [07/Mar/2013:14:31:03 +0800] "GET /?signature=f7aaabf80a5d93c8243a7d594b86ddf1590a5811&echostr=5851680341281486475&timestamp=1362638474&nonce=1362450527 HTTP/1.0" 200 0 "-" "Mozilla/4.0"
+
+
+
+
+60.247.57.208 - - [08/Mar/2013:09:49:16 +0800] "GET /?signature=f7aaabf80a5d93c8243a7d594b86ddf1590a5811&echostr=5851680341281486475&timestamp=1362638474&nonce=1362450527 HTTP/1.1" 200 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17"
+^C
+[wm@web /usr/local/apps/eicps.com/logs]$ ls
+access.log	error.log
+[wm@web /usr/local/apps/eicps.com/logs]$ cd ..
+[wm@web /usr/local/apps/eicps.com]$ ls
+env	logs	tmp	www
+[wm@web /usr/local/apps/eicps.com]$ ls -l
+total 16
+drwxr-xr-x  5 root  wheel  512 Mar  7 00:34 env
+drwxr-xr-x  2 www   www    512 Mar  7 00:08 logs
+drwxr-xr-x  2 root  wheel  512 Mar  7 02:14 tmp
+drwxr-xr-x  3 root  wheel  512 Mar  7 02:14 www
+[wm@web /usr/local/apps/eicps.com]$ sudo su
+[root@web /usr/local/apps/eicps.com]# chown -R wm www
+[root@web /usr/local/apps/eicps.com]# ls
+env	logs	tmp	www
+[root@web /usr/local/apps/eicps.com]# ls -l
+total 32
+drwxr-xr-x  5 root  wheel  512 Mar  7 00:34 env
+drwxr-xr-x  2 www   www    512 Mar  7 00:08 logs
+drwxr-xr-x  2 root  wheel  512 Mar  7 02:14 tmp
+drwxr-xr-x  3 wm    wheel  512 Mar  7 02:14 www
+[root@web /usr/local/apps/eicps.com]# ls
+env	logs	tmp	www
+[root@web /usr/local/apps/eicps.com]# tail -f /var/log/uwsgi.log
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 89169)
+spawned uWSGI worker 1 (pid: 89170, cores: 1)
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 89170
+error
+error
+error
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 09:52:53 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91509)
+spawned uWSGI worker 1 (pid: 91510, cores: 1)
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91510
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 09:56:04 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91541)
+spawned uWSGI worker 1 (pid: 91542, cores: 1)
+
+
+
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91542
+<sha1 HASH object @ 0x802933470>
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 09:58:38 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91559)
+spawned uWSGI worker 1 (pid: 91560, cores: 1)
+
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91560
+f7aaabf80a5d93c8243a7d594b86ddf1590a5811
+
+
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:18:08 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91617)
+spawned uWSGI worker 1 (pid: 91618, cores: 1)
+
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91618
+^C
+[root@web /usr/local/apps/eicps.com]# tail -f /var/log/uwsgi.log
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91617)
+spawned uWSGI worker 1 (pid: 91618, cores: 1)
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91618
+
+
+
+
+
+
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:39:18 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91679)
+spawned uWSGI worker 1 (pid: 91680, cores: 1)
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91680
+Traceback (most recent call last):
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 764, in _handle
+    return route.call(**args)
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 1575, in wrapper
+    rv = callback(*a, **ka)
+  File "/usr/local/apps/eicps.com/www/index.py", line 52, in process
+    msg = parse_msg(data)
+NameError: global name 'data' is not defined
+Traceback (most recent call last):
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 764, in _handle
+    return route.call(**args)
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 1575, in wrapper
+    rv = callback(*a, **ka)
+  File "/usr/local/apps/eicps.com/www/index.py", line 52, in process
+    msg = parse_msg(data)
+NameError: global name 'data' is not defined
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:40:19 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91699)
+spawned uWSGI worker 1 (pid: 91700, cores: 1)
+
+
+
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91700
+Traceback (most recent call last):
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 764, in _handle
+    return route.call(**args)
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 1575, in wrapper
+    rv = callback(*a, **ka)
+  File "/usr/local/apps/eicps.com/www/index.py", line 53, in process
+    _to = msg.ToUserName
+AttributeError: 'dict' object has no attribute 'ToUserName'
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:41:18 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91717)
+spawned uWSGI worker 1 (pid: 91718, cores: 1)
+
+
+
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91718
+Traceback (most recent call last):
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 764, in _handle
+    return route.call(**args)
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 1575, in wrapper
+    rv = callback(*a, **ka)
+  File "/usr/local/apps/eicps.com/www/index.py", line 55, in process
+    return message_tpl % (_to, _from, int(time.time()), "Test..")
+NameError: global name 'time' is not defined
+
+
+
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:41:50 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91735)
+spawned uWSGI worker 1 (pid: 91736, cores: 1)
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91736
+Traceback (most recent call last):
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 764, in _handle
+    return route.call(**args)
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 1575, in wrapper
+    rv = callback(*a, **ka)
+  File "/usr/local/apps/eicps.com/www/index.py", line 56, in process
+    return message_tpl % (_to, _from, int(time.time()), "Test..")
+AttributeError: 'builtin_function_or_method' object has no attribute 'time'
+
+
+
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:42:41 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91753)
+spawned uWSGI worker 1 (pid: 91754, cores: 1)
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91754
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:43:28 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91771)
+spawned uWSGI worker 1 (pid: 91772, cores: 1)
+
+
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91772
+
+<xml>
+ <ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+ <FromUserName><![CDATA[oHfn2jvrtXP287S-N8sS3EwIG2EA]]></FromUserName>
+ <CreateTime>1362710627</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[Test..]]></Content>
+ <FuncFlag>0</FuncFlag>
+ </xml>
+
+
+
+
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:44:39 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91801)
+spawned uWSGI worker 1 (pid: 91802, cores: 1)
+
+
+
+
+
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91802
+<xml><ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+<FromUserName><![CDATA[oHfn2jvrtXP287S-N8sS3EwIG2EA]]></FromUserName>
+<CreateTime>1362711302</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[哦救命]]></Content>
+<MsgId>5852800475979579539</MsgId>
+</xml>==
+
+<xml>
+ <ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+ <FromUserName><![CDATA[oHfn2jvrtXP287S-N8sS3EwIG2EA]]></FromUserName>
+ <CreateTime>1362710688</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[Test..]]></Content>
+ <FuncFlag>0</FuncFlag>
+ </xml>
+
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:46:15 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91821)
+spawned uWSGI worker 1 (pid: 91822, cores: 1)
+
+
+
+
+
+
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91822
+<xml><ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+<FromUserName><![CDATA[oHfn2jvrtXP287S-N8sS3EwIG2EA]]></FromUserName>
+<CreateTime>1362711406</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[欧情况下]]></Content>
+<MsgId>5852800922656178324</MsgId>
+</xml>==
+
+<xml>
+ <ToUserName><![CDATA[oHfn2jvrtXP287S-N8sS3EwIG2EA]]></ToUserName>
+ <FromUserName><![CDATA[gh_efe2ceb54bfe]]></FromUserName>
+ <CreateTime>1362710792</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[Test..]]></Content>
+ <FuncFlag>0</FuncFlag>
+ </xml>
+
+
+
+
+<xml><ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+<FromUserName><![CDATA[oHfn2jow7yTBf9dY1hNdJumWWBSQ]]></FromUserName>
+<CreateTime>1362711586</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[Hello2BizUser]]></Content>
+<MsgId>5852801695750291456</MsgId>
+</xml>==
+
+<xml>
+ <ToUserName><![CDATA[oHfn2jow7yTBf9dY1hNdJumWWBSQ]]></ToUserName>
+ <FromUserName><![CDATA[gh_efe2ceb54bfe]]></FromUserName>
+ <CreateTime>1362710972</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[Test..]]></Content>
+ <FuncFlag>0</FuncFlag>
+ </xml>
+
+<xml><ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+<FromUserName><![CDATA[oHfn2jow7yTBf9dY1hNdJumWWBSQ]]></FromUserName>
+<CreateTime>1362711608</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[你要干嘛]]></Content>
+<MsgId>5852801790239572119</MsgId>
+</xml>==
+
+<xml>
+ <ToUserName><![CDATA[oHfn2jow7yTBf9dY1hNdJumWWBSQ]]></ToUserName>
+ <FromUserName><![CDATA[gh_efe2ceb54bfe]]></FromUserName>
+ <CreateTime>1362710994</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[Test..]]></Content>
+ <FuncFlag>0</FuncFlag>
+ </xml>
+
+
+
+
+<xml><ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+<FromUserName><![CDATA[oHfn2jvrtXP287S-N8sS3EwIG2EA]]></FromUserName>
+<CreateTime>1362711712</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>==
+
+<xml>
+ <ToUserName><![CDATA[oHfn2jvrtXP287S-N8sS3EwIG2EA]]></ToUserName>
+ <FromUserName><![CDATA[gh_efe2ceb54bfe]]></FromUserName>
+ <CreateTime>1362711097</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[Test..]]></Content>
+ <FuncFlag>0</FuncFlag>
+ </xml>
+
+<xml><ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+<FromUserName><![CDATA[oHfn2jow7yTBf9dY1hNdJumWWBSQ]]></FromUserName>
+<CreateTime>1362711713</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>==
+
+<xml>
+ <ToUserName><![CDATA[oHfn2jow7yTBf9dY1hNdJumWWBSQ]]></ToUserName>
+ <FromUserName><![CDATA[gh_efe2ceb54bfe]]></FromUserName>
+ <CreateTime>1362711099</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[Test..]]></Content>
+ <FuncFlag>0</FuncFlag>
+ </xml>
+
+<xml><ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+<FromUserName><![CDATA[oHfn2jvrtXP287S-N8sS3EwIG2EA]]></FromUserName>
+<CreateTime>1362711773</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[Hello2BizUser]]></Content>
+<MsgId>5852802498909175808</MsgId>
+</xml>==
+
+<xml>
+ <ToUserName><![CDATA[oHfn2jvrtXP287S-N8sS3EwIG2EA]]></ToUserName>
+ <FromUserName><![CDATA[gh_efe2ceb54bfe]]></FromUserName>
+ <CreateTime>1362711158</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[Test..]]></Content>
+ <FuncFlag>0</FuncFlag>
+ </xml>
+
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 10:55:24 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91859)
+spawned uWSGI worker 1 (pid: 91860, cores: 1)
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91860
+<xml><ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+<FromUserName><![CDATA[oHfn2jrzCcUAlJlJY7h88nbkwWuk]]></FromUserName>
+<CreateTime>1362712870</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>==
+Traceback (most recent call last):
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 764, in _handle
+    return route.call(**args)
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 1575, in wrapper
+    rv = callback(*a, **ka)
+  File "/usr/local/apps/eicps.com/www/index.py", line 57, in process
+    print strs
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 225-235: ordinal not in range(128)
+<xml><ToUserName><![CDATA[gh_efe2ceb54bfe]]></ToUserName>
+<FromUserName><![CDATA[oHfn2jrzCcUAlJlJY7h88nbkwWuk]]></FromUserName>
+<CreateTime>1362712887</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[Hello2BizUser]]></Content>
+<MsgId>5852807283502743552</MsgId>
+</xml>==
+Traceback (most recent call last):
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 764, in _handle
+    return route.call(**args)
+  File "/usr/local/apps/eicps.com/env/lib/python2.7/site-packages/bottle.py", line 1575, in wrapper
+    rv = callback(*a, **ka)
+  File "/usr/local/apps/eicps.com/www/index.py", line 57, in process
+    print strs
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 225-235: ordinal not in range(128)
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 11:20:10 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91919)
+spawned uWSGI worker 1 (pid: 91920, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+kevent(): Interrupted system call [event.c line 446]
+goodbye to uWSGI.
+*** Starting uWSGI 1.0.4 (64bit) on [Fri Mar  8 11:28:31 2013] ***
+compiled with version: 4.2.1 20070831 patched [FreeBSD] on 06 March 2013 16:53:16
+current working directory: /usr/home/wm
+writing pidfile to /var/run/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 80
+setuid() to 80
+limiting address space of processes...
+your process address space limit is 268435456 bytes (256 MB)
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers ***
+VirtualHosting mode enabled.
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.3 (default, Apr 21 2012, 04:03:37)  [GCC 4.2.1 20070831 patched [FreeBSD]]
+Python main interpreter initialized at 0x8024c0240
+your server socket listen backlog is limited to 100 connections
+*** Operational MODE: single process ***
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 91955)
+spawned uWSGI worker 1 (pid: 91956, cores: 1)
+
+
+
+
+
+
+
+WSGI application 0 (mountpoint='app.eicps.com|/') ready on interpreter 0x8024c0240 pid: 91956
+
+
+
+
+
+
+
+

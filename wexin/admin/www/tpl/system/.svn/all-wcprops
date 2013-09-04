@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/system
+END
+system_base.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/system/system_base.tpl
+END
+profile.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/system/profile.tpl
+END
+main.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/system/main.tpl
+END
+login.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/tpl/system/login.tpl
+END

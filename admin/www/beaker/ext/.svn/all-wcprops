@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/ext
+END
+google.py
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/ext/google.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/ext/__init__.py
+END
+sqla.py
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/ext/sqla.py
+END
+database.py
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/ext/database.py
+END
+memcached.py
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/ext/memcached.py
+END

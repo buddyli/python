@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/controller/system
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/controller/system/__init__.py
+END
+uri.py
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/controller/system/uri.py
+END
+dashboard.py
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/controller/system/dashboard.py
+END
+manager.py
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/controller/system/manager.py
+END

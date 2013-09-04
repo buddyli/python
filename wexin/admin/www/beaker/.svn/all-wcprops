@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker
+END
+converters.py
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/converters.py
+END
+middleware.py
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/middleware.py
+END
+util.py
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/util.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/__init__.py
+END
+exceptions.py
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/exceptions.py
+END
+synchronization.py
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/synchronization.py
+END
+container.py
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/container.py
+END
+cache.py
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/cache.py
+END
+session.py
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/searchprojects/!svn/ver/93018/trunk/mako/Mobile/server2/branches/python/www/beaker/session.py
+END

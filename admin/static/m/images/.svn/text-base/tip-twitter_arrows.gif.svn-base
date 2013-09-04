@@ -1,0 +1,93 @@
+<!DOCTYPE HTML> 
+ 
+<html> 
+ 
+<head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <title>Monofactor Theme Demo | Arpora2 - Business Portfolio</title> 
+		      
+        <link href="assets/styles.css" rel="stylesheet" media="all" /> 
+        <link href="assets/tooltips.css" rel="stylesheet" media="all" />
+        <link href="assets/colorpicker.css" rel="stylesheet" media="all" /> 
+        
+        <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="assets/ie.css" />
+        <![endif]--> 
+	        
+        <script type="text/javascript" src="assets/jquery.js"></script> 
+        <script type="text/javascript" src="assets/poshytip.js"></script> 
+        <script type="text/javascript" src="assets/custom.js"></script>
+        <script type="text/javascript" src="assets/colorpicker.js"></script>
+        
+        <script type="text/javascript"> 
+    jQuery(document).ready(function($){
+	$('#colorSelector').ColorPicker({
+	color: '#ff0055',
+	onShow: function (colpkr) {
+		$(colpkr).fadeIn(500);
+		return false;
+	},
+	onHide: function (colpkr) {
+		$(colpkr).fadeOut(500);
+		return false;
+	},
+	onChange: function (hsb, hex, rgb) {
+		$('#colorSelector div').css('backgroundColor', '#' + hex);
+		$('#iframe').contents().find('ul#filter li a.active, p.continue a strong, .skinmain, #header-wrap > header > nav > div > ul > li.sfHover > ul li a:hover, a:hover, a.p-continue, p.continue a strong').css('color', '#' + hex + ' !important');
+		$('#iframe').contents().find('#header-wrap .socials, .sc-sliding-po header nav a:hover,.pagination a:hover, .pagination .current,#header-wrap header h1 sup').css('backgroundColor', '#' + hex);	
+		$('#iframe').contents().find('#header-wrap').css('borderTop', '5px solid #' + hex);
+		
+		}
+	});
+	$('#theme-page').mouseenter(function(){
+	    $('.colorpicker').fadeOut(500);
+	});
+    });
+</script>  
+         
+</head> 
+ 
+<body> 
+ 
+	<div id="switcher"> 
+	
+		<div class="center"> 
+		
+            <ul> 
+            
+                <li><div id="logo"><a href="http://www.monofactor.com/">Monofactor</a></div><!--logo--></li> 
+                
+                <li id="theme_list"><a id="theme_select" href="#">Select A Theme...</a> 
+                
+                    <ul id="theme_dropdown"> 
+                    
+                    	<li><a data-colour='true' href="#" rel="http://demo.monofactor.com/a2,http://themeforest.net/item/arpora2-multifunctional-business-portfolio/560816?ref=iProThemes">Arpora2 - Business Portfolio</a></li><li><a data-colour='false' href="#" rel="http://demo.monofactor.com/avalonstyle_wp_15,http://themeforest.net/item/avalon-style-the-ultimate-business-and-portfolio/234947?ref=iProThemes">Avalon Style - Business</a></li><li><a data-colour='false' href="#" rel="http://demo.monofactor.com/arpora_wp,http://themeforest.net/item/arpora-super-wordpress-portfolio-blog/179349?ref=iProThemes">Arpora - Portfolio</a></li><li><a data-colour='false' href="#" rel="http://demo.monofactor.com/cleanity/login.html,http://themeforest.net/item/cleanity-complete-admin-cms-skin-/41517?ref=iProThemes">Cleanity - CMS Skin</a></li>                       
+                    </ul> 
+                
+                </li>	
+                
+                <li id="colour_list"> 
+                	
+                    <div id="colorSelector"><div style="background-color: #ff0055;"></div></div>  
+                    
+                
+                </li>	
+ 
+ 				
+ 
+                <li class="remove_frame" rel="http://demo.monofactor.com/a2"><a href="http://demo.monofactor.com/a2">Remove Frame</a></li> 
+                
+                <li id="purchaseLink" class="purchase" rel="http://themeforest.net/item/arpora2-multifunctional-business-portfolio/560816?ref=iProThemes"><a href="http://themeforest.net/item/arpora2-multifunctional-business-portfolio/560816?ref=iProThemes">Purchase</a></li>				
+                
+    
+            </ul> 
+        
+		</div> 
+        
+	</div> 
+	
+    <iframe id="iframe" src="http://demo.monofactor.com/a2" frameborder="0" width="100%"></iframe> 
+    
+</body> 
+ 
+</html>
