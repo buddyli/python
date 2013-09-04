@@ -65,8 +65,7 @@ def login_by_prikey():
 	pass
 
 if __name__ == '__main__':
-	ips = ['172.16.80.110,22,licb,/home/licb/key/key_licb/id_rsa',
-	'IP','端口','用户名','密钥位置']
+	ips = [	'IP','端口','用户名','密钥位置']
 
 	for ip in ips:
 		host,port,user,path = ip.split(',')
