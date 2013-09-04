@@ -22,7 +22,6 @@ source = '3'#来源,3:客户端
 #validCode = '2013xiaoyuanjt'#接口验证口口令，活动正式开始后会有一个正式的口令
 validCode = '***************'#现网正式口令
 url = '''**************'''#接口地址
-#主平台host映射221.176.31.101 huodong.feixin.10086.cn
 date_format = '%Y%m%d%H%M%S'
 msg_receiver = '15210078395'#报警短信通知号码
 wf_path = None#号码文件位置--声明为全局变量，打到可以在方法内部给这个变量赋值的目的
