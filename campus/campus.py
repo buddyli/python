@@ -20,8 +20,8 @@ resourceId = '0'#资源ID
 finishTime = ''#业务线授予学分时间,必须是yyyyMMddHHmmss格式。长度14位，不足14位，后面补“0”
 source = '3'#来源,3:客户端
 #validCode = '2013xiaoyuanjt'#接口验证口口令，活动正式开始后会有一个正式的口令
-validCode = '050075bbe4a64a1ba0e3e814c6813c38'#现网正式口令
-url = '''http://huodong.feixin.10086.cn:8081/xiaoyuan2013/Service.ashx?Action=UserTaskFinished'''#接口地址
+validCode = '***************'#现网正式口令
+url = '''**************'''#接口地址
 #主平台host映射221.176.31.101 huodong.feixin.10086.cn
 date_format = '%Y%m%d%H%M%S'
 msg_receiver = '15210078395'#报警短信通知号码
@@ -76,7 +76,7 @@ def load_login_user():
 
 #发送通知短信	
 def send_sms(mobile,msg):
-	sms_url = '''http://msgw.intra.umessage.com.cn:7000/sms/single?UserName=cilentsearch&Password=fkeiwour384729&AppCode=15100002&ReceiveType=2&SourceTermID=10658880&DestTermID=%s&FeeTermID=%s&MessageContent=%s''' % (mobile,mobile,msg)
+	sms_url = '''http://www.abcdefg.com/sms/single?UserName=cilentsearch&Password=fkeiwour384729&AppCode=15100002&ReceiveType=2&SourceTermID=10658880&DestTermID=%s&FeeTermID=%s&MessageContent=%s''' % (mobile,mobile,msg)
 	req = urllib2.Request(sms_url)
 	resp = urllib2.urlopen(req)
 	print 'send_sms %s result %s' % (sms_url,resp.read())
