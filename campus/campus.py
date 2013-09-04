@@ -75,7 +75,7 @@ def load_login_user():
 
 #发送通知短信	
 def send_sms(mobile,msg):
-	sms_url = '''http://www.abcdefg.com/sms/single?UserName=cilentsearch&Password=fkeiwour384729&AppCode=15100002&ReceiveType=2&SourceTermID=10658880&DestTermID=%s&FeeTermID=%s&MessageContent=%s''' % (mobile,mobile,msg)
+	sms_url = '''http://www.abcdefg.com/sms/single?UserName=****&Password=***&AppCode=15100002&ReceiveType=2&SourceTermID=10658880&DestTermID=%s&FeeTermID=%s&MessageContent=%s''' % (mobile,mobile,msg)
 	req = urllib2.Request(sms_url)
 	resp = urllib2.urlopen(req)
 	print 'send_sms %s result %s' % (sms_url,resp.read())
