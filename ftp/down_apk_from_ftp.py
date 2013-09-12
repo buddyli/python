@@ -64,13 +64,6 @@ def pag_from_ftp(local_dir,server_dir = ftp_dir):
 	#最后不要忘了关闭已经打开的链接
 	ftp.close()
 
-#将文件拷贝到web和wap下载站点的工作目录
-def copy_pkg(local_dir,web_dir,wap_dir):
-	cp_web = 'cp %s/* %s' % (local_dir,web_dir)
-	cp_wap = 'cp %s/* %s' % (local_dir,wap_dir)
-	os.system(cp_web)
-	os.system(cp_wap)
-
 web_dir = '/usr/local/umclient/Data/upfile_www/'
 wap_dir = '/usr/local/umclient/Data/upfile_wap/'
 #将文件拷贝到web和wap下载站点的工作目录
