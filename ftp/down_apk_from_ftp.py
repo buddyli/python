@@ -6,6 +6,7 @@
 import os
 import sys
 from ftplib import FTP
+#import copy_apk
 
 #设置一下字符编码
 reload(sys)
@@ -70,12 +71,50 @@ def copy_pkg(local_dir,web_dir,wap_dir):
 	os.system(cp_web)
 	os.system(cp_wap)
 
+web_dir = '/usr/local/umclient/Data/upfile_www/'
+wap_dir = '/usr/local/umclient/Data/upfile_wap/'
+#将文件拷贝到web和wap下载站点的工作目录
+def copy_pkg(local_dir,webdir = web_dir,wapdir = wap_dir):
+	print '安装包源目录[%s],拷贝目标目录[%s,%s]' % (local_dir,webdir,wapdir)
+	cp_web = 'cp %s/* %s' % (local_dir,webdir)
+	cp_wap = 'cp %s/* %s' % (local_dir,wapdir)
+
+	os.system(cp_web)
+	os.system(cp_wap)
+
 if __name__ == '__main__':
-	dir = '/tmp/test/'
-	ver = '2_6_4'
-	web_dir = '/usr/local/umclient/Data/upfile_www/'
-	wap_dir = '/usr/local/umclient/Data/upfile_wap/'
-	pag_from_ftp(dir,'渠道发布包/Android/2.6.4/')
-	pag_from_ftp(dir,'正式发布包/Android/2.6.4/')
-	rename(dir,ver)
-	#copy_pkg(dir,web_dir,wap_dir)
+	#发布标记，默认是关的
+	release = 'n'
+	if len(sys.argv) < 2:
+		print 'USEAGE:python down_apk_from_ftp.py 版本号[2.6.4] [发布标记[y/n]]'
+		sys.exit(0)
+	else:
+		ver = sys.argv[1]
+		if len(sys.argv) >= 3:
+			release = sys.argv[2]
+
+	#BASE = os.path.dirname('/tmp')
+	tmp_apk_dir = os.path.join('/tmp','apk')
+	if os.path.exists(tmp_apk_dir):
+		print '====清空安装包本地保存目录 %s' % tmp_apk_dir
+		for f in os.listdir(tmp_apk_dir):
+			fpath = os.path.join(tmp_apk_dir,f)
+			print '===删除已经存在的apk安装包 %s' % fpath
+			os.remove(fpath)
+	else:
+		print '====安装包本地保存目录 %s 不存在，创建之====' % tmp_apk_dir
+		os.makedirs(tmp_apk_dir)
+	#下载所有渠道的Android安装包
+	pag_from_ftp(tmp_apk_dir,'渠道发布包/Android/%s/' % ver)
+	pag_from_ftp(tmp_apk_dir,'正式发布包/Android/%s/' % ver)
+	ver = ver.replace('.', '_')
+	rename(tmp_apk_dir,ver)
+
+	#如果用户选择了直接发布安装包，那么将安装包同步到发布目录下
+	print '>>>>>>>>>>>>> %s' % release
+	if release == 'y' or release == 'Y':
+		print '=====发布安装包======'
+		copy_pkg(tmp_apk_dir)
+		#web_dir = '/home/licb/wap/'
+		#wap_dir = '/home/licb/web/'
+		#copy_pkg(tmp_apk_dir,web_dir,wap_dir)
